@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прозрачный сайт</title>
+    <!-- Подключаем Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Подключаем Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <!-- Подключаем наши стили -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Добро пожаловать на прозрачный сайт</h1>
+        <p class="text-center">Здесь вы можете увидеть, какие данные собираются о вас.</p>
+
+        <!-- Панель "Собранные данные" -->
+        <div class="collected-data">
+            <h3>Собранные данные:</h3>
+            <ul id="collected-data-list">
+                <!-- Данные будут добавлены сюда -->
+            </ul>
+        </div>
+
+        <!-- Карта посещений -->
+        <div class="map-container">
+            <h3>Карта посещений:</h3>
+            <div id="map" style="height: 300px; border-radius: 8px;"></div>
+        </div>
+
+        <!-- Объяснение данных -->
+        <div class="data-explanation">
+            <h3>Зачем мы собираем эти данные?</h3>
+            <p>
+                <strong>IP-адрес:</strong> Используется для анализа географии посетителей и защиты от злоупотреблений.
+            </p>
+            <p>
+                <strong>Браузер и ОС:</strong> Помогают нам оптимизировать сайт для вашего устройства.
+            </p>
+            <p>
+                <strong>Разрешение экрана:</strong> Позволяет адаптировать дизайн сайта под ваше устройство.
+            </p>
+        </div>
+
+        <!-- Кнопка для скачивания данных -->
+        <button id="download-data" class="btn btn-primary">Скачать мои данные</button>
+
+        <!-- Интерактивный пример -->
+        <button id="collect-data" class="btn btn-secondary">Собрать мои данные</button>
+        <pre id="request-example"></pre>
+
+        <!-- Режим инкогнито -->
+        <label>
+            <input type="checkbox" id="incognito-mode"> Режим инкогнито
+        </label>
+    </div>
+
+    <!-- Подключаем Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Подключаем Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Подключаем наш скрипт -->
+    <script src="script.js"></script>
+</body>
+</html>
